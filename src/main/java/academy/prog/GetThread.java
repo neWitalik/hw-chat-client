@@ -19,7 +19,7 @@ public class GetThread implements Runnable {
     }
 
     @Override
-    public void run() { // WebSockets
+    public void run() {
         try {
             while ( ! Thread.interrupted()) {
                 URL url = new URL(Utils.getURL() + "/get?from=" + n);
@@ -41,8 +41,7 @@ public class GetThread implements Runnable {
                     is.close();
                 }
 
-                // C -> S -> x
-                // WebSockets
+
 
                 Thread.sleep(500);
             }
